@@ -1,0 +1,7 @@
+---
+name: rep
+
+templates:
+  bin/bpm-pre-start.erb:                    bin/bpm-pre-start
+  config/bpm.yml.erb:                       config/bpm.yml
+

@@ -1,0 +1,16 @@
+processes:
+  - name: garden
+    executable: /var/vcap/packages/bpm/bin/tini
+    args:
+      - --
+      - /var/vcap/jobs/garden/bin/garden_start
+    unsafe:
+      privileged: true
+    hooks:
+      pre_start: /var/vcap/jobs/garden/bin/bpm-pre-start
+    additional_volumes:
+      - path: /var/vcap/data/rep/shared/garden
+        mount_only: true
+        allow_executions: true
+        shared: true
+        writable: true

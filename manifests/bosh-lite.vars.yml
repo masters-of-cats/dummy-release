@@ -1,0 +1,5 @@
+deployment: dummy
+stemcell-os: ubuntu-xenial
+vm: container
+network: lite
+az: lite

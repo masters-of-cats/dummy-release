@@ -1,0 +1,8 @@
+---
+name: garden
+
+templates:
+  bin/bpm-pre-start.erb:                    bin/bpm-pre-start
+  bin/garden_start:                         bin/garden_start
+  config/bpm.yml.erb:                       config/bpm.yml
+

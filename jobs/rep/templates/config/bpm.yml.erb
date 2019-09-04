@@ -1,0 +1,9 @@
+processes:
+  - name: rep
+    executable: /bin/sleep
+    args:
+      - 99999
+    unsafe:
+      privileged: true
+    hooks:
+      pre_start: /var/vcap/jobs/rep/bin/bpm-pre-start

@@ -1,0 +1,6 @@
+check process garden
+  with pidfile /var/vcap/sys/run/bpm/garden/garden.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start garden"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop garden"
+  group vcap
+
